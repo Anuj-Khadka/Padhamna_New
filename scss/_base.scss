@@ -79,9 +79,25 @@ a{
 
 
 footer{
+    position: relative; 
+    height: 85vh;
+    width: 100%;
+    background-color: $primary;
+    color: white;
+
+    .footer-container-up{
+        @include flexCenter();
+        height:75vh;
+        background-color: rgb(165, 102, 20);
+    }
     
-}
-.footer-container-down{
-    @include flexCenter();
-    position: absolute;
+    .footer-container-down{
+        @include flexCenter();
+        position: relative;
+        height:10vh;
+
+        border-top: 2px solid rgba(240, 240, 240, 0.5);
+        margin:0 50px;
+
+    }
 }

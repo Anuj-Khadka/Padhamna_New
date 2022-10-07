@@ -83,11 +83,28 @@ a {
   color: black;
 }
 
-.footer-container-down {
+footer {
+  position: relative;
+  height: 85vh;
+  width: 100%;
+  background-color: #eb400d;
+  color: white;
+}
+footer .footer-container-up {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  height: 75vh;
+  background-color: rgb(165, 102, 20);
+}
+footer .footer-container-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 10vh;
+  border-top: 2px solid rgba(240, 240, 240, 0.5);
+  margin: 0 50px;
 }
 
 .container {
