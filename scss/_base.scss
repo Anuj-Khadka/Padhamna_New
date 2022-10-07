@@ -1,0 +1,87 @@
+@import "./mixins";
+@import "./variables";
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+body{
+    width:100%;
+}
+
+.header{
+    height:15vh;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+a{
+    display: block;
+    padding: 8px 25px;
+    color: $accent;
+    text-decoration: none;
+}
+
+.nav-bar {
+    ul{
+    display:flex;
+    justify-content: space-around;
+    padding: 0;
+    list-style: none;
+    li {
+        display: inline-block;
+        position: relative;
+        line-height: 21px;
+        text-align: left;
+        &:hover{
+            color: #fff;
+        }
+        &:hover ul.dropdown{
+            display: block; 
+        }
+    }
+    ul.dropdown {
+        min-width: 100%;  
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+    }
+}
+}
+
+.action-btns{
+    width:20%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px 10px;
+}
+
+.action-btn {
+  @include buttons;
+}
+
+.action-btn:hover{
+    background: transparent;
+    border: solid 1px #eb400d;
+    color: black;
+}
+
+
+
+
+
+footer{
+    
+}
+.footer-container-down{
+    @include flexCenter();
+    position: absolute;
+}

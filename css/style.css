@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100%;
+}
+
+.header{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+a{
+    display: block;
+    padding: 8px 25px;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-bar > ul{
+    display:flex;
+    justify-content: space-around;
+    padding: 0;
+    list-style: none;
+}
+ 
+ul li {
+    display: inline-block;
+    position: relative;
+    line-height: 21px;
+    text-align: left;
+}
+
+ul li:hover{
+    color: #fff;
+    /* background: #939393; */
+}
+
+ul li ul.dropdown {
+    min-width: 100%;  
+    /* background: #f2f2f2; */
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+}
+ul li:hover ul.dropdown {
+    display: block; 
+}
+
+.action-btns{
+    width:20%;
+    display:flex;
+    justify-content: space-between;
+    padding:5px 10px;
+    /* background-color: red;; */
+}
+
+.action-btn {
+  background-color: #eb400d;
+  border-radius: 6px;
+  border-width: 0;
+  /* box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0; */
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  /* font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif; */
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: all .2s,box-shadow .08s ease-in;
+}
+
+.action-btn:hover{
+    background: transparent;
+    border: solid 1px #eb400d;
+    color: black;
+}
+
+

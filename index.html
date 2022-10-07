@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padhamna</title>
+    <link rel="stylesheet" href="../scss/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header_logo">
+            <svg width="200" height="57" viewBox="0 0 350 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25.2188 88.4323V68.1198C27.8906 70.0625 30.9635 71.0313 34.2813 71.0313C39.0573 71.0313 43.0208 69.2552 46.1771 65.6094C49.4167 61.9688 51.0313 57.4375 51.0313 52.0156C51.0313 46.5938 49.4167 42.1458 46.2604 38.5052C43.1042 34.8594 39.0573 33 34.2813 33C30.9635 33 27.9688 33.974 25.2188 35.8333V33.8073H13V88.4323H25.2188ZM25.3802 52.099C25.3802 48.1302 28.2917 44.9792 31.8542 44.9792C35.4167 44.9792 38.2448 48.1302 38.2448 52.099C38.2448 55.9844 35.4167 58.974 31.8542 58.974C28.2917 58.974 25.3802 55.9844 25.3802 52.099Z" fill="#171414"/>
+                <path d="M73.2476 33C68.4715 33 64.508 34.8594 61.2684 38.5052C58.1121 42.1458 56.4976 46.5938 56.4976 52.0156C56.4976 57.4375 58.1121 61.9688 61.2684 65.6094C64.508 69.2552 68.4715 71.0313 73.2476 71.0313C76.5653 71.0313 79.5601 70.0625 82.3101 68.2031V70.224H94.5288V33.8073H82.3101V35.8333C79.5601 33.974 76.5653 33 73.2476 33ZM69.2788 51.9375C69.2788 48.0521 72.1955 44.9792 75.7528 44.9792C79.3153 44.9792 82.1486 48.0521 82.1486 51.9375C82.1486 55.901 79.3153 58.974 75.7528 58.974C72.1955 58.974 69.2788 55.901 69.2788 51.9375Z" fill="#171414"/>
+                <path d="M116.248 32.4427C111.472 32.4427 107.508 34.3021 104.268 37.9479C101.112 41.5885 99.4976 46.0365 99.4976 51.4583C99.4976 56.8802 101.112 61.4115 104.268 65.0521C107.508 68.6979 111.472 70.474 116.248 70.474C119.565 70.474 122.56 69.5052 125.31 67.6458V69.6667H137.529V11H125.31V35.276C122.56 33.4167 119.565 32.4427 116.248 32.4427ZM112.279 51.3802C112.279 47.4948 115.195 44.4219 118.753 44.4219C122.315 44.4219 125.149 47.4948 125.149 51.3802C125.149 55.3438 122.315 58.4167 118.753 58.4167C115.195 58.4167 112.279 55.3438 112.279 51.3802Z" fill="#171414"/>
+                <path d="M159.248 33C154.472 33 150.508 34.8594 147.268 38.5052C144.112 42.1458 142.498 46.5938 142.498 52.0156C142.498 57.4375 144.112 61.9688 147.268 65.6094C150.508 69.2552 154.472 71.0313 159.248 71.0313C162.565 71.0313 165.56 70.0625 168.31 68.2031V70.224H180.529V33.8073H168.31V35.8333C165.56 33.974 162.565 33 159.248 33ZM155.279 51.9375C155.279 48.0521 158.195 44.9792 161.753 44.9792C165.315 44.9792 168.149 48.0521 168.149 51.9375C168.149 55.901 165.315 58.974 161.753 58.974C158.195 58.974 155.279 55.901 155.279 51.9375Z" fill="#171414"/>
+                <path d="M197.716 70.224V49.5885C197.716 46.4323 199.737 44.1667 202.409 44.1667C204.998 44.1667 207.024 46.5938 207.024 49.5885V70.224H219.32V49.5885C219.32 46.4323 221.347 44.1667 224.018 44.1667C226.607 44.1667 228.628 46.5938 228.628 49.5885V70.224H240.847V46.5156C240.847 42.7135 239.555 39.474 236.883 36.8854C234.294 34.2969 231.138 33 227.336 33C222.966 33 219.482 34.7813 216.977 38.2604C214.466 34.7813 210.909 33 206.373 33C202.815 33 199.904 34.2135 197.716 36.6406V33.8073H185.498V70.224H197.716Z" fill="#171414"/>
+                <path d="M258.445 69.6198V38.0625L282.961 69.6198H294.857V15H281.992V46.6406L257.472 15H245.498V69.6198H258.445Z" fill="#FF0000"/>
+                <path d="M316.248 33C311.472 33 307.508 34.8594 304.268 38.5052C301.112 42.1458 299.498 46.5938 299.498 52.0156C299.498 57.4375 301.112 61.9688 304.268 65.6094C307.508 69.2552 311.472 71.0313 316.248 71.0313C319.565 71.0313 322.56 70.0625 325.31 68.2031V70.224H337.529V33.8073H325.31V35.8333C322.56 33.974 319.565 33 316.248 33ZM312.279 51.9375C312.279 48.0521 315.195 44.9792 318.753 44.9792C322.315 44.9792 325.149 48.0521 325.149 51.9375C325.149 55.901 322.315 58.974 318.753 58.974C315.195 58.974 312.279 55.901 312.279 51.9375Z" fill="#FF0000"/>
+                </svg>
+                
+        </div>
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li class="link-items" id="link-item-1"><a href="#">Home</a></li>
+                <!-- <li><a href="#">Courses</a></li> -->
+                <li class="link-items" id="link-item-2">
+                    <a href="#">Courses ▾</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Class 8</a></li>
+                        <li><a href="#">Class 9</a></li>
+                        <li><a href="#">Class 10</a></li>
+                        <li><a href="#">Class 11</a></li>
+                        <li><a href="#">Class 12</a></li>
+                        <li><a href="#">Programming</a></li>
+                    </ul>
+                </li>
+                <li class="link-items" id="link-item-3"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="action-btns">
+            <input type="button" class="action-btn" id="loginin-btn" value="Log in">
+            <input type="button" class="action-btn" id="signup-btn" value="Sign up">
+        </div>
+    </header>
+
+    <div class="container">
+        this is the body
+    </div>
+
+
+
+
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row mb-15">
+                <div class="col-xl-3 col-lg-4 col-md-6  wow fadeInUp2 animated" data-wow-delay='.1s'>
+                    <div class="footer__widget mb-30">
+                        <div class="footer-log mb-20">
+                            <a href="index.html" class="logo">
+                                <img src="assets/img/logo/header_logo_one.svg" alt="">
+                            </a>
+                        </div>
+                        <p>Padamna is on a mission to democratize quality education for everyone looking to learn at an affordable price.</p>
+                        <div class="social-media footer__social mt-30">
+                         
+                            <a href="https://twitter.com/whyloshwhy"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/padamna"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/padamna/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp2 animated" data-wow-delay='.3s'>
+                    <div class="footer__widget mb-30 pl-40 pl-md-0 pl-xs-0">
+                        <h6 class="widget-title mb-35">Contact us</h6>
+                        <ul class="fot-list">
+                            <li><a href="#">hello@padamna.com</a></li>
+                            <li><a href="#">+977 9812345678</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Our Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6  wow fadeInUp2 animated" data-wow-delay='.5s'>
+                    <div class="footer__widget mb-25 pl-65 pl-md-0 pl-xs-0">
+                        <h6 class="widget-title mb-35">Quick Links</h6>
+                        <ul class="fot-list">
+                            <li><a href="#">About US</a></li>
+                            <li><a href="#">Explore Pages</a></li>
+                            <li><a href="#">Our Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6  wow fadeInUp2 animated" data-wow-delay='.7s'>
+                    <div class="footer__widget mb-30">
+                        <h6 class="widget-title mb-35">Features</h6>
+                        <ul class="fot-list mb-30">
+                            <li><a href="#">Home Page</a> </li>
+                            <li><a href="blog.html">Latest News</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right-area border-bot pt-60">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="copyright mb-35 text-center">
+                            <h5>Copyright@ 2022 <a href="index.html">padamNa</a>. All Rights Reserved</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <footer>
+        <div class="footer-container-up"></div>
+        <div class="footer-container-down">
+            <div class="copyright">
+                <h5>Copyright @ 2022 <a href="index.html">padamNa</a>. All Rights Reserved</h5>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
