@@ -1,7 +1,140 @@
 @import "./variables";
+@import "./mixins";
 @import "./base";
 
-.container{
-    height:500vh;
-    background:green;
+.home{
+    height: 88vh;
+    width:100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../img/home-background.jpg);
+    padding:0 100px;
+    color: white;
+    
+    @include flexCenter;
+
+    .home-contain{
+        width:60%;
+        height:100%;
+        @include flexCenter;
+
+        .home-content{
+            // background:red;
+            
+            h1{
+                font-size: 3rem;
+                line-height: 4rem;
+                margin-bottom: 15px;
+            }
+
+            p{
+                font-size: 1.3rem;
+                margin-bottom: 25px;
+            }
+
+            .action-btns{
+                @include flexCenter;
+                justify-content: start;
+            }
+            .action-btn{
+                border-radius: 4px;
+                border-width: 0;
+                color: #fff;
+                cursor: pointer;
+                font-size: 100%;
+                height: 44px;
+                line-height: 1.15;
+                outline: none;
+                padding: 0 35px;
+                margin-right: 15px;
+                position: relative;
+                text-align: center;
+                transition: all .1s;
+            }
+        }
+    }
+    .home-image{
+        // background: green;
+        width:40%;
+            height:100%;
+    }
 }
+
+.great-deal{
+    height:80vh;
+    @include flexCenter;
+    padding: 0px 90px;
+
+    .deal-contain{
+        @include flexCenter;
+
+        .deal-desp{
+            width: 25%;
+            padding:10px;
+
+            h2{
+                font-size: 2rem;
+                font-weight: 400;
+                margin-bottom: 10px;
+            }
+        }
+
+        .deal-content{
+            width:75%;
+            @include flexCenter;
+            justify-content: space-evenly;
+
+            .deal-card{
+                // height: 300px;
+                // width: 30%;
+                margin-right: 20px;
+                padding: 30px 30px;
+                border-radius: 10px;
+                @include flexCenter;
+                flex-direction: column;
+                justify-content: space-evenly;
+                transition: all .2s ease-in-out;
+
+                .single-item .single-box-icon{
+                    margin-bottom: 20px;
+                }
+                .single-item .sub-title{
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    margin-bottom: 15px;                    
+                }
+                .single-item p{
+                    font-size: 1rem;
+                }
+                
+                &:hover{
+                    transform: translateY(-5px);
+                }                
+            }
+            #deal-card-1{
+                background: rgb(226, 163, 80);
+                .single-box-icon img{
+                    padding: 20px;
+                    border-radius: 50%;
+                    background: rgb(241, 184, 108);
+                }
+                
+            }
+            #deal-card-2{
+                background: rgb(201, 91, 201);
+                .single-box-icon img{
+                    padding: 20px;
+                    border-radius: 50%;
+                    background: rgb(226, 130, 226);
+                }
+            }
+            #deal-card-3{
+                background: rgb(94, 94, 214);
+                .single-box-icon img{
+                    padding: 20px;
+                    border-radius: 50%;
+                    background: rgb(132, 132, 238);
+                }
+            }
+        }
+    }
+}
+
