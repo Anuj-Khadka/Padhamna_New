@@ -34,21 +34,15 @@
                 @include flexCenter;
                 justify-content: start;
             }
-            .action-btn{
-                border-radius: 4px;
-                border-width: 0;
-                color: #fff;
-                cursor: pointer;
-                font-size: 100%;
-                height: 44px;
-                line-height: 1.15;
-                outline: none;
-                padding: 0 35px;
-                margin-right: 15px;
-                position: relative;
-                text-align: center;
-                transition: all .1s;
-            }
+
+            #student-btn{
+                @include priButton();
+                border-radius: 6px;
+              }
+            #teacher-btn{
+                @include secButton();
+                border-radius: 6px;
+              }
         }
     }
     .home-image{
@@ -88,6 +82,8 @@
                 margin-right: 20px;
                 padding: 30px 30px;
                 border-radius: 10px;
+                border: none;
+                cursor: pointer;
                 @include flexCenter;
                 flex-direction: column;
                 justify-content: space-evenly;
@@ -110,31 +106,120 @@
                 }                
             }
             #deal-card-1{
-                background: rgb(226, 163, 80);
+                background: #8f66ff3b;
                 .single-box-icon img{
                     padding: 20px;
                     border-radius: 50%;
-                    background: rgb(241, 184, 108);
+                    background: #8E66FF;
                 }
                 
             }
             #deal-card-2{
-                background: rgb(201, 91, 201);
+                background: rgba(241, 77, 93, 0.300);
                 .single-box-icon img{
                     padding: 20px;
                     border-radius: 50%;
-                    background: rgb(226, 130, 226);
+                    background: #F14D5D;
                 }
             }
             #deal-card-3{
-                background: rgb(94, 94, 214);
+                background: #ff723a3a;
                 .single-box-icon img{
                     padding: 20px;
                     border-radius: 50%;
-                    background: rgb(132, 132, 238);
+                    background: #FF723A;
                 }
             }
         }
     }
 }
 
+.looking-for{
+    height:150vh;
+    width:100%;
+    @include flexCenter;
+    flex-direction: column;
+    padding: 0px 90px;
+    background: linear-gradient(rgba(255, 114, 58, 0.05) 0%, rgba(241, 77, 93, 0.03) 100%);
+
+    .looking-for-header{
+        width:100%;
+        margin-bottom: 85px;
+
+        h5{
+        text-align: center !important;
+        box-sizing: border-box;
+        font-family: "Manrope", sans-serif;
+        line-height: 1.1;
+        font-style: normal;
+        font-size: 18px;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+        color: #FF723A;
+        
+
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: #FF723A;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                bottom: 0;
+                z-index: 1;
+            }
+        }
+
+        h2{
+            font-size: 44px;
+            line-height: 1.3;
+            position: relative;
+        }
+    }
+
+    .looking-for-contain{
+        width:100%;
+        margin-bottom: 85px;;
+        
+        
+        .looking-for-content{
+            flex-wrap: wrap;
+
+
+            .looking-for-box{
+                background-color: #ffffff;
+                border-radius: 10px;
+                padding: 50px 50px;
+                cursor: pointer;
+                @include flexCenter();
+                flex-direction: column;
+
+
+                .looking-for-box-icon{
+                    margin-bottom: 25px;
+                }
+
+                h3{
+                    font-size: 30px;
+                    margin-bottom: 25px;
+                }
+
+                p{
+                    margin-bottom: 30px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 25px;
+                    color: #707070;
+                }
+
+                #teacher-join{
+                    @include priButton();
+                }
+                #student-join{
+                    @include secButton();
+                }
+            }
+        }
+    }
+}

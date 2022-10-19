@@ -81,9 +81,37 @@ a {
 }
 
 .action-btn {
-  background-color: #eb400d;
-  border-radius: 6px;
-  border-width: 0;
+  margin-right: 15px;
+}
+
+#loginin-btn {
+  background-color: transparent;
+  color: #FF723A;
+  border-radius: 25px;
+  border: solid 2px #FF723A;
+  cursor: pointer;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  outline: none;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loginin-btn:hover {
+  background: #FF723A;
+  color: white;
+}
+
+#signup-btn {
+  background-color: #FF723A;
+  border-radius: 25px;
+  border: solid 2px #FF723A;
   color: #fff;
   cursor: pointer;
   font-size: 100%;
@@ -93,14 +121,15 @@ a {
   padding: 0 25px;
   position: relative;
   text-align: center;
+  text-decoration: none;
   transition: all 0.1s;
-  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.action-btn:hover {
+#signup-btn:hover {
+  color: #FF723A;
   background: transparent;
-  border: solid 1px #eb400d;
-  color: black;
 }
 
 footer {
@@ -182,20 +211,53 @@ footer .footer-container-down {
   align-items: center;
   justify-content: start;
 }
-.home .home-contain .home-content .action-btn {
-  border-radius: 4px;
-  border-width: 0;
+.home .home-contain .home-content #student-btn {
+  background-color: transparent;
+  color: #FF723A;
+  border-radius: 25px;
+  border: solid 2px #FF723A;
+  cursor: pointer;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  outline: none;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+.home .home-contain .home-content #student-btn:hover {
+  background: #FF723A;
+  color: white;
+}
+.home .home-contain .home-content #teacher-btn {
+  background-color: #FF723A;
+  border-radius: 25px;
+  border: solid 2px #FF723A;
   color: #fff;
   cursor: pointer;
   font-size: 100%;
   height: 44px;
   line-height: 1.15;
   outline: none;
-  padding: 0 35px;
-  margin-right: 15px;
+  padding: 0 25px;
   position: relative;
   text-align: center;
+  text-decoration: none;
   transition: all 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+.home .home-contain .home-content #teacher-btn:hover {
+  color: #FF723A;
+  background: transparent;
 }
 .home .home-image {
   width: 40%;
@@ -234,6 +296,8 @@ footer .footer-container-down {
   margin-right: 20px;
   padding: 30px 30px;
   border-radius: 10px;
+  border: none;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,26 +320,145 @@ footer .footer-container-down {
   transform: translateY(-5px);
 }
 .great-deal .deal-contain .deal-content #deal-card-1 {
-  background: rgb(226, 163, 80);
+  background: rgba(143, 102, 255, 0.231372549);
 }
 .great-deal .deal-contain .deal-content #deal-card-1 .single-box-icon img {
   padding: 20px;
   border-radius: 50%;
-  background: rgb(241, 184, 108);
+  background: #8E66FF;
 }
 .great-deal .deal-contain .deal-content #deal-card-2 {
-  background: rgb(201, 91, 201);
+  background: rgba(241, 77, 93, 0.3);
 }
 .great-deal .deal-contain .deal-content #deal-card-2 .single-box-icon img {
   padding: 20px;
   border-radius: 50%;
-  background: rgb(226, 130, 226);
+  background: #F14D5D;
 }
 .great-deal .deal-contain .deal-content #deal-card-3 {
-  background: rgb(94, 94, 214);
+  background: rgba(255, 114, 58, 0.2274509804);
 }
 .great-deal .deal-contain .deal-content #deal-card-3 .single-box-icon img {
   padding: 20px;
   border-radius: 50%;
-  background: rgb(132, 132, 238);
+  background: #FF723A;
+}
+
+.looking-for {
+  height: 150vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 90px;
+  background: linear-gradient(rgba(255, 114, 58, 0.05) 0%, rgba(241, 77, 93, 0.03) 100%);
+}
+.looking-for .looking-for-header {
+  width: 100%;
+  margin-bottom: 85px;
+}
+.looking-for .looking-for-header h5 {
+  text-align: center !important;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  line-height: 1.1;
+  font-style: normal;
+  font-size: 18px;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  color: #FF723A;
+}
+.looking-for .looking-for-header h5::before {
+  content: "";
+  position: absolute;
+  background-color: #FF723A;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.looking-for .looking-for-header h2 {
+  font-size: 44px;
+  line-height: 1.3;
+  position: relative;
+}
+.looking-for .looking-for-contain {
+  width: 100%;
+  margin-bottom: 85px;
+}
+.looking-for .looking-for-contain .looking-for-content {
+  flex-wrap: wrap;
+}
+.looking-for .looking-for-contain .looking-for-content .looking-for-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 50px 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.looking-for .looking-for-contain .looking-for-content .looking-for-box .looking-for-box-icon {
+  margin-bottom: 25px;
+}
+.looking-for .looking-for-contain .looking-for-content .looking-for-box h3 {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+.looking-for .looking-for-contain .looking-for-content .looking-for-box p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #707070;
+}
+.looking-for .looking-for-contain .looking-for-content .looking-for-box #teacher-join {
+  background-color: transparent;
+  color: #FF723A;
+  border-radius: 25px;
+  border: solid 2px #FF723A;
+  cursor: pointer;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  outline: none;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.looking-for .looking-for-contain .looking-for-content .looking-for-box #teacher-join:hover {
+  background: #FF723A;
+  color: white;
+}
+.looking-for .looking-for-contain .looking-for-content .looking-for-box #student-join {
+  background-color: #FF723A;
+  border-radius: 25px;
+  border: solid 2px #FF723A;
+  color: #fff;
+  cursor: pointer;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  outline: none;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.looking-for .looking-for-contain .looking-for-content .looking-for-box #student-join:hover {
+  color: #FF723A;
+  background: transparent;
 }/*# sourceMappingURL=style.css.map */

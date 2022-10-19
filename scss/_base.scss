@@ -84,16 +84,17 @@ a{
 }
 
 .action-btn {
-  @include buttons;
   margin-right: 15px;
 }
 
-.action-btn:hover{
-    background: transparent;
-    border: solid 1px #eb400d;
-    color: black;
+#loginin-btn{
+    @include priButton;
 }
 
+
+#signup-btn{
+    @include secButton;
+}
 
 
 
