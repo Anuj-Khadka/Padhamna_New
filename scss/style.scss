@@ -2,224 +2,300 @@
 @import "./mixins";
 @import "./base";
 
-.home{
-    height: 88vh;
-    width:100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../img/home-background.jpg);
-    padding:0 100px;
-    color: white;
-    
+.home {
+  height: 88vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/home-background.jpg);
+  padding: 0 100px;
+  color: white;
+
+  @include flexCenter;
+
+  .home-contain {
+    width: 60%;
+    height: 100%;
     @include flexCenter;
 
-    .home-contain{
-        width:60%;
-        height:100%;
+    .home-content {
+      // background:red;
+
+      h1 {
+        font-size: 3rem;
+        line-height: 4rem;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+      }
+
+      .action-btns {
         @include flexCenter;
+        justify-content: start;
+      }
 
-        .home-content{
-            // background:red;
-            
-            h1{
-                font-size: 3rem;
-                line-height: 4rem;
-                margin-bottom: 15px;
-            }
-
-            p{
-                font-size: 1.3rem;
-                margin-bottom: 25px;
-            }
-
-            .action-btns{
-                @include flexCenter;
-                justify-content: start;
-            }
-
-            #student-btn{
-                @include priButton();
-                border-radius: 6px;
-              }
-            #teacher-btn{
-                @include secButton();
-                border-radius: 6px;
-              }
-        }
+      #student-btn {
+        @include priButton();
+        border-radius: 6px;
+      }
+      #teacher-btn {
+        @include secButton();
+        border-radius: 6px;
+      }
     }
-    .home-image{
-        // background: green;
-        width:40%;
-            height:100%;
-    }
+  }
+  .home-image {
+    // background: green;
+    width: 40%;
+    height: 100%;
+  }
 }
 
-.great-deal{
-    height:80vh;
+.great-deal {
+  height: 80vh;
+  @include flexCenter;
+  padding: 0px 90px;
+
+  .deal-contain {
     @include flexCenter;
-    padding: 0px 90px;
 
-    .deal-contain{
-        @include flexCenter;
+    .deal-desp {
+      width: 25%;
+      padding: 10px;
 
-        .deal-desp{
-            width: 25%;
-            padding:10px;
-
-            h2{
-                font-size: 2rem;
-                font-weight: 400;
-                margin-bottom: 10px;
-            }
-        }
-
-        .deal-content{
-            width:75%;
-            @include flexCenter;
-            justify-content: space-evenly;
-
-            .deal-card{
-                // height: 300px;
-                // width: 30%;
-                margin-right: 20px;
-                padding: 30px 30px;
-                border-radius: 10px;
-                border: none;
-                cursor: pointer;
-                @include flexCenter;
-                flex-direction: column;
-                justify-content: space-evenly;
-                transition: all .2s ease-in-out;
-
-                .single-item .single-box-icon{
-                    margin-bottom: 20px;
-                }
-                .single-item .sub-title{
-                    font-size: 1.5rem;
-                    font-weight: 400;
-                    margin-bottom: 15px;                    
-                }
-                .single-item p{
-                    font-size: 1rem;
-                }
-                
-                &:hover{
-                    transform: translateY(-5px);
-                }                
-            }
-            #deal-card-1{
-                background: #8f66ff3b;
-                .single-box-icon img{
-                    padding: 20px;
-                    border-radius: 50%;
-                    background: #8E66FF;
-                }
-                
-            }
-            #deal-card-2{
-                background: rgba(241, 77, 93, 0.300);
-                .single-box-icon img{
-                    padding: 20px;
-                    border-radius: 50%;
-                    background: #F14D5D;
-                }
-            }
-            #deal-card-3{
-                background: #ff723a3a;
-                .single-box-icon img{
-                    padding: 20px;
-                    border-radius: 50%;
-                    background: #FF723A;
-                }
-            }
-        }
+      h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
     }
+
+    .deal-content {
+      width: 75%;
+      @include flexCenter;
+      justify-content: space-evenly;
+
+      .deal-card {
+        // height: 300px;
+        // width: 30%;
+        margin-right: 20px;
+        padding: 30px 30px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        @include flexCenter;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transition: all 0.2s ease-in-out;
+
+        // .single-item .single-box-icon{
+        //     margin-bottom: 20px;
+        // }
+        // .single-item .sub-title{
+        //     font-size: 1.5rem;
+        //     font-weight: 400;
+        //     margin-bottom: 15px;
+        // }
+        // .single-item p{
+        //     font-size: 1rem;
+        //     color: #707070;
+        // }
+
+        .card-body {
+          p {
+            color: #707070;
+          }
+        }
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
+      #deal-card-1 {
+        background: #8f66ff3b;
+        .single-box-icon img {
+          padding: 20px;
+          border-radius: 50%;
+          background: #8e66ff;
+        }
+      }
+      #deal-card-2 {
+        background: rgba(241, 77, 93, 0.3);
+        .single-box-icon img {
+          padding: 20px;
+          border-radius: 50%;
+          background: #f14d5d;
+        }
+      }
+      #deal-card-3 {
+        background: #ff723a3a;
+        .single-box-icon img {
+          padding: 20px;
+          border-radius: 50%;
+          background: #ff723a;
+        }
+      }
+    }
+  }
 }
 
-.looking-for{
-    height:150vh;
-    width:100%;
-    @include flexCenter;
-    flex-direction: column;
-    padding: 0px 90px;
-    background: linear-gradient(rgba(255, 114, 58, 0.05) 0%, rgba(241, 77, 93, 0.03) 100%);
+.looking-for {
+  width: 100%;
+  @include flexCenter;
+  flex-direction: column;
+  padding: 80px 90px;
+  background: linear-gradient(
+    rgba(255, 114, 58, 0.05) 0%,
+    rgba(241, 77, 93, 0.03) 100%
+  );
 
-    .looking-for-header{
-        width:100%;
-        margin-bottom: 85px;
+  .looking-for-header {
+    width: 100%;
+    margin-bottom: 85px;
 
-        h5{
-        text-align: center !important;
-        box-sizing: border-box;
-        font-family: "Manrope", sans-serif;
-        line-height: 1.1;
-        font-style: normal;
+    h5 {
+      text-align: center !important;
+      box-sizing: border-box;
+      font-family: "Manrope", sans-serif;
+      line-height: 1.1;
+      font-style: normal;
+      font-size: 18px;
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+      color: #ff723a;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: #ff723a;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+      }
+    }
+
+    h2 {
+      font-size: 44px;
+      line-height: 1.3;
+      position: relative;
+    }
+  }
+
+  .looking-for-contain {
+    width: 100%;
+    // margin-bottom: 85px;
+
+    .looking-for-content {
+      flex-wrap: wrap;
+
+      .looking-for-box {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 50px 50px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        @include flexCenter();
+        flex-direction: column;
+        box-shadow: 0px 1px 10px -5px #707070;
+        transition: all 0.3s ease-in-out;
+
+        .looking-for-box-icon {
+          margin-bottom: 25px;
+        }
+
+        h3 {
+          font-size: 30px;
+          margin-bottom: 25px;
+        }
+
+        p {
+          margin-bottom: 30px;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 25px;
+          color: #707070;
+        }
+
+        #teacher-join {
+          @include priButton();
+        }
+        #student-join {
+          @include secButton();
+        }
+
+        &:hover {
+          transform: scale(1.01);
+        }
+      }
+    }
+  }
+}
+
+.browse-category {
+  @extend .looking-for;
+
+  .browse-category-header {
+    @extend .looking-for-header;
+  }
+
+  .browse-category-contain {
+    @extend .looking-for-contain;
+
+    .browse-category-content {
+      @include flexCenter();
+
+      .browse-category-card {
+        @include flexCenter;
+        flex-direction: column;
+        background-color: #fff;
+        width: auto;
+        text-decoration: none;
+        color: inherit;
+        padding: 30px 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 1px 10px -2px #707070;
+        transition: all 0.2s ease-in-out;
+
+        .single-box-icon {
+          margin-bottom: 30px;
+        }
+
+        .card-body {
+          @include flexCenter;
+          flex-direction: column;
+
+          p {
+            color: #707070;
+          }
+        }
+
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+    }
+
+    .view-more {
+      @include flexCenter;
+      justify-content: end;
+
+      a {
         font-size: 18px;
         margin-bottom: 15px;
-        position: relative;
-        display: inline-block;
-        color: #FF723A;
-        
+        text-decoration: none;
+        color: #ff723a;
 
-            &::before {
-                content: '';
-                position: absolute;
-                background-color: #FF723A;
-                width: 100%;
-                height: 2px;
-                left: 0;
-                bottom: 0;
-                z-index: 1;
-            }
+        &:hover {
+          text-decoration: underline;
         }
-
-        h2{
-            font-size: 44px;
-            line-height: 1.3;
-            position: relative;
-        }
+      }
     }
-
-    .looking-for-contain{
-        width:100%;
-        margin-bottom: 85px;;
-        
-        
-        .looking-for-content{
-            flex-wrap: wrap;
-
-
-            .looking-for-box{
-                background-color: #ffffff;
-                border-radius: 10px;
-                padding: 50px 50px;
-                cursor: pointer;
-                @include flexCenter();
-                flex-direction: column;
-
-
-                .looking-for-box-icon{
-                    margin-bottom: 25px;
-                }
-
-                h3{
-                    font-size: 30px;
-                    margin-bottom: 25px;
-                }
-
-                p{
-                    margin-bottom: 30px;
-                    font-size: 16px;
-                    font-weight: 400;
-                    line-height: 25px;
-                    color: #707070;
-                }
-
-                #teacher-join{
-                    @include priButton();
-                }
-                #student-join{
-                    @include secButton();
-                }
-            }
-        }
-    }
+  }
 }
